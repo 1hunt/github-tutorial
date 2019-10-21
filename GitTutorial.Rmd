@@ -49,6 +49,10 @@ which git
 git --version
 ```
 
+### 4.1 Windows Installation
+
+
+### 4.2 macOS Installation
 
 ## 5. Bonjour Git, enchante
 
