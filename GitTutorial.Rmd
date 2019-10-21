@@ -1,6 +1,6 @@
 ---
 title: "EEB603_GitTutorial"
-author: "Katie Murenbeeld"
+author: "Jacob Heil, Lauren Hunt, Katie Murenbeeld"
 date: "10/18/2019"
 output: pdf_document
 ---
@@ -19,9 +19,36 @@ GitHub is a cloud based platform built around Git that stores code *__pushed__* 
 
 ## 2. Register for a GitHub Account
 
+If you do not currently have a GitHub account then you will register for one today! If you already have a GitHub account, sit back and relax while your classmates get set up.
+
+1. Go to https://github.com
+2. Pick a username that incorporates your actual name. Enter an email and create a password.
+3. Select a plan: Free is all you will likely need.
+4. (optional) Answer a few questions about your code skill level, plans for using GitHub, and lost some interests.
+5. You'll get a verification email. 
+6. When you click the link from the Verification you will be taken to your new GitHub account with the option to create your first repository or *repo*. Do not make one yet. We will come back to that. 
+
 ## 3. Upgrade R and RStudio
+We all have R and RStudio on our own computers by now, but here you can check your version and upgrade if needed.
+
+```{r}
+R.version.string
+```
+
+If you would like to update your current R packages you can use the following command:
+
+```{r}
+#update.packages(ask = FALSE, checkBuilt = TRUE)
+```
 
 ## 4. Install Git
+Open up the terminal or shell and check to see if you already git installed.
+
+```{bash}
+which git
+git --version
+```
+
 
 ## 5. Bonjour Git, enchante
 
