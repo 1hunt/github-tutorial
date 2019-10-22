@@ -68,7 +68,7 @@ else if(type=="venn"){
 
 #test
 a <- sar_venn(c("rosea","leucophylla","leuco-rosea"))
-plot(a)
+plot(a, quantities=T)
 
 #Print as Pdf
 pdf("test_venn.pdf")
