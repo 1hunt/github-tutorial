@@ -25,6 +25,7 @@ row.names(mdat) == row.names(sar)
 #type = character, "euler" or "venn", default="euler"
 #remove.n = numeric, default=0, removes x number of OTUs off the bottom
 
+###Start function
 sar_venn <- function(species,type="euler",remove.n=0){
   
 #Raw data
