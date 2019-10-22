@@ -7,15 +7,15 @@ if (!require("vegan")) {install.packages("vegan"); require("vegan")}
 ##Load Data
 setwd("workingdirectory_path")
 #Raw Data
-sar <- read.table("asv-table-dada2-2015-sarracenia.txt", header = T, row.names = 1, check.names = F, sep = "\t") 
+sar <- read.table("github_tutorial_data.txt", header = T, row.names = 1, check.names = F, sep = "\t") 
 sar <- sar[order(row.names(sar)),]
 #Metadata
-mdat <- read.csv("Metadata_2015_Sarracenia.csv", head=T, row.names=1) 
-row.names(mdat) == row.names(sar)
-mdat <- mdat[-38,] #sar(18sdata) does not include the row found here
+mdat <- read.csv("github_tutorial_metadata.csv", head=T, row.names=1) 
+mdat <- mdat[order(row.names(mdat)),]
+#Remove shotgun samples
 sar <- subset(sar, mdat$Project %in% ("Comparison"))
 mdat <- subset(mdat, row.names(mdat) %in% row.names(sar))
-mdat <- mdat[order(row.names(mdat)),]
+#Check that tables match
 row.names(mdat) == row.names(sar)
 
 ###Function: sar_venn()
@@ -28,16 +28,16 @@ row.names(mdat) == row.names(sar)
 ###Start function
 sar_venn <- function(species,type="euler",remove.n=0){
   
-#Raw data
+#Subset raw data of given species
 sar_sbst <- subset(sar, mdat$Host_Spp %in% species)
-#Metadata
+#Subset metadata of given species
 mdat_sbst <- subset(mdat, row.names(mdat) %in% row.names(sar_sbst))
 #Drop old factors from metadata
 mdat_sbst$Host_Spp <- mdat_sbst$Host_Spp[drop=T]
 
 #Rarify
 sar_sbst.r <- rrarefy(sar_sbst, min(rowSums(sar_sbst))) 
-#Eliminate all values =< x, x must be varied manually
+#Eliminate all values =< remove.n
 sar_sbst.r <- sar_sbst.r[,colSums(sar_sbst.r) > remove.n]
 
 #create empty dataframe to store presence/absence vectors
@@ -47,7 +47,8 @@ product <-  matrix(nrow=(ncol(sar_sbst.r)),ncol=length(species),dimnames=list(co
 for (i in species[1:length(species)]){ 
   product[,i] <- 1*(colSums(subset(sar_sbst.r, (mdat_sbst$Host_Spp%in%i)))>1)
   }
-
+  
+#generate diagrams
 if(type=="euler" & length(species)>5){
 product <- data.frame(product)
 product <- euler(product,shape="ellipse")
