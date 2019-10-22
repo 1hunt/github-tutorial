@@ -38,12 +38,12 @@ mdat_sbst$Host_Spp <- mdat_sbst$Host_Spp[drop=T]
 sar_sbst.r <- rrarefy(sar_sbst, min(rowSums(sar_sbst))) 
 #Eliminate all values =< x, x must be varied manually
 sar_sbst.r <- sar_sbst.r[,colSums(sar_sbst.r) > remove.n]
-#Eliminate bottom x% of values, .x must be varied manually
-sar_sbst.r <- sar_sbst.r[,rank(colSums(sar_sbst.r), ties.method = "random") > .25*(max(rank(colSums(sar_sbst.r), ties.method = "random")))]
 
+#create empty dataframe to store presence/absence vectors
 product <-  matrix(nrow=(ncol(sar_sbst.r)),ncol=length(species),dimnames=list(colnames(sar_sbst.r),species))
 
-for (i in species[1:length(species)]){
+#create vector for presence/absence of OTUs for each given species
+for (i in species[1:length(species)]){ 
   product[,i] <- 1*(colSums(subset(sar_sbst.r, (mdat_sbst$Host_Spp%in%i)))>1)
   }
 
@@ -64,10 +64,10 @@ else if(type=="venn"){
 }
 }
 
-###test
-
+#test
 a <- sar_venn(c("rosea","leucophylla","leuco-rosea"))
-  
+plot(a)
+
 #Print as Pdf
 pdf("test_venn.pdf")
 plot(a, quantities=T)
