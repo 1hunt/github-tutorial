@@ -21,7 +21,7 @@ row.names(mdat) == row.names(sar)
 ###Function: sar_venn()
 ##Syntax: sar_venn(species,type,remove.n)
 ##Arguments: 
-#species = any combination of "alata", "flava", "leucophylla", "purpurea", "rosea", "rubra"
+#species = any combination of "alata", "flava", "leucophylla", "purpurea", "rosea", "rubra", "flava-leuco", "flava-rosea", "leuco-rosea"
 #type = character, "euler" or "venn", default="euler"
 #remove.n = numeric, default=0, removes x number of OTUs off the bottom
 
