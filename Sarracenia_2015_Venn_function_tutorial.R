@@ -19,7 +19,7 @@ mdat <- mdat[order(row.names(mdat)),]
 row.names(mdat) == row.names(sar)
 
 ###Function: sar_venn()
-##Syntax: sar_venn(species,remove.n)
+##Syntax: sar_venn(species,type,remove.n)
 ##Arguments: 
 #species = any combination of "alata", "flava", "leucophylla", "purpurea", "rosea", "rubra"
 #type = character, "euler" or "venn", default="euler"
