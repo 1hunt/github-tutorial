@@ -8,7 +8,7 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# Part One: Introduction and Installation
+# Part One: Introduction and Installation 
 
 ## 1. Introduction: Why Git and GitHub?
 ### What's the difference between Git and GitHub.
