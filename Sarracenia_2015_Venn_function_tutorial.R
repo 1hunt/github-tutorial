@@ -5,9 +5,9 @@ if (!require("eulerr")) {install.packages("eulerr"); require("eulerr")}
 if (!require("vegan")) {install.packages("vegan"); require("vegan")}
 
 ##Load Data
-setwd("/Users/Jacob/Desktop/Bittleston/Sarracenia_Data/Vennpdfs/")
+setwd("workingdirectory_path")
 #Raw Data
-sar <- read.table("asv-table-dada2-18s-2015-sarracenia.txt", header = T, row.names = 1, check.names = F, sep = "\t") 
+sar <- read.table("asv-table-dada2-2015-sarracenia.txt", header = T, row.names = 1, check.names = F, sep = "\t") 
 sar <- sar[order(row.names(sar)),]
 #Metadata
 mdat <- read.csv("Metadata_2015_Sarracenia.csv", head=T, row.names=1) 
@@ -64,14 +64,12 @@ else if(type=="venn"){
 }
 }
 
-a <- sar_venn(c("flava","rosea","leucophylla","leuco-rosea","flava-leuco","flava-rosea"))
-plot(a,labels=c("Flava","Rosea","Leucophylla", "Leucophylla-Rosea", "Flava-Leucophylla","Flava-Rosea"),
-           quantities=T, main="Title")
+###test
 
-test <- sar_venn(c("rosea","leucophylla","leuco-rosea"))
-
+a <- sar_venn(c("rosea","leucophylla","leuco-rosea"))
+  
 #Print as Pdf
-pdf("d18s_sfslsro_Venn.pdf")
+pdf("test_venn.pdf")
 plot(a, quantities=T)
 dev.off()
 
