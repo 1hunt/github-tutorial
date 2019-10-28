@@ -1,2 +1,2 @@
 #Example of branching
-#branch edit
+#Merge branch changes
