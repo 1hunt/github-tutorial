@@ -31,13 +31,13 @@ If you do not currently have a GitHub account then you will register for one tod
 ## 3. Upgrade R and RStudio
 We all have R and RStudio on our own computers by now, but here you can check your version and upgrade if needed.
 
-```{r version echo=TRUE }
+```{r version, echo=TRUE }
 R.version.string
 ```
 
 If you would like to update your current R packages you can use the following command:
 
-```{r update eval=FALSE echo=FALSE}
+```{r update, eval=FALSE, echo=FALSE}
 update.packages(ask = FALSE, checkBuilt = TRUE)
 ```
 
@@ -57,6 +57,36 @@ git --version
 ## 5. Bonjour Git, enchante
 
 ## 6. Optional: Install a Git client
+
+## 9. Connect to GitHub 
+
+###Make a repo
+
+Here, we are just making sure we can push and pull and everyone is communicating.
+
+1. Head to https://github.com/ and check that you're still logged in
+
+2. Click on the green "New" button or click on "Repositories" on your profile page and then click on the "New" button. 
+```{r pressure, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("new.png")
+```
+
+3. Fill in:
+
+Repository name 
+
+Description: something for the README file
+
+Public (for now)
+
+and then YES initilize the repo with a README
+
+For everything else, select default.
+
+4. Click "Create repository"
+
+5. Copy the HTTP clone URL to your clipboard via green "Clone or Download" button
+
 
 
 
