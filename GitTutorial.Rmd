@@ -32,7 +32,7 @@ If you do not currently have a GitHub account then you will register for one tod
 We all have R and RStudio on our own computers by now, but here you can check your version and upgrade if needed.
 
 ```{r version, echo=TRUE }
-R.version.string
+
 ```
 
 If you would like to update your current R packages you can use the following command:
