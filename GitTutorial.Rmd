@@ -32,7 +32,7 @@ If you do not currently have a GitHub account then you will register for one tod
 We all have R and RStudio on our own computers by now, but here you can check your version and upgrade if needed.
 
 ```{r version, echo=TRUE }
-
+R.version.string
 ```
 
 If you would like to update your current R packages you can use the following command:
@@ -50,7 +50,10 @@ git --version
 ```
 
 ### 4.1 Windows Installation
+There are two options for Windows installation:
+**Option 1** : install Git for Windows (https://gitforwindows.org), aka _msysgit_ or "Git Bash", which will provide Git as well as a Bash shell.
 
+_side note on shells/terminal/bash. Windows OS doesn't provide a shell terminal. Shell refers to an early (1970s) command-line interpreter for Unix shell.  Bash (**B**ourne **a**gain **sh**ell) is the command-line interpreter for GNU (**g**nu **n**ot **u**nix) OS. It's all still very confusing, just know that bash is largely compatible with shell, and that for many Git commands the "Git Bash" shell/terminal will need to be used._
 
 ### 4.2 macOS Installation
 
