@@ -44,7 +44,7 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 ## 4. Install Git
 Open up the terminal or shell and check to see if you already git installed.
 
-```{bash}
+```{}
 which git
 git --version
 ```
@@ -131,20 +131,20 @@ For everything else, select default.
 1. Branches are separate lines of edits which enable multiple people to work at the same time without destroying each others work
 2. The main branch is named ‘Master’ by default
 3. To create new branch:
-	a. Git Bash::$ git branch branch_name #create branch
+	a. Git Shell::$ git branch branch_name #create branch
 	b. RStudio:: Button in GUI (see picture)
 4. To switch between branches
-	a. Git Bash::$ git checkout branch_name #create branch
+	a. Git Shell::$ git checkout branch_name #create branch
     	b. RStudio:: Button in GUI (see picture)
 5. To merge branches
-    	a. Do this in Git Bash, not RStudio or GitHub:
+    	a. Do this in Git Shell, not RStudio or GitHub:
         	$ git checkout master #switch to master branch
         	$ git merge branch_name #merge branch_name into master
     	b. Conflicts
-        	i. if merging branch conflicts with main, CONFLICT message will show in Git Bash
-        	ii. find out more about the conflict: Git Bash::$ git status
+        	i. if merging branch conflicts with main, CONFLICT message will show in Git Shell
+        	ii. find out more about the conflict: Git Shell::$ git status
         	iii. resolve conflict: open file from the main branch in R, edit to meet desired outcome
-6. Abandon merge: Git Bash::$ git merge --abort
+6. Abandon merge: Git Shell::$ git merge --abort
  
 
 
