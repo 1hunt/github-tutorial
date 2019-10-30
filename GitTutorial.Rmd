@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 1. Introduction: Why Git and GitHub?
 ### What's the difference between Git and GitHub.
-Version controll is important for...
+Version control is important for...
 
 Git is a **version control system** that is like a supped up version of the "Track Changes" feature within Microsoft Word. Git allows the different collaborators on a project to track changes and revert to older versions if needed. 
 
@@ -113,7 +113,8 @@ bew install git
 
 ## 9. Connect to GitHub 
 
-###Make a repo
+
+## Make a repo
 
 Here, we are just making sure we can push and pull and everyone is communicating.
 
@@ -140,36 +141,77 @@ For everything else, select default.
 
 5. Copy the HTTP clone URL to your clipboard via green "Clone or Download" button
 
-###Clone your repo to a local computer
+## Clone your repo to a local computer
 
 1. Head to terminal or shell
-  a. Determine what directory you’re in by printing your working directory:
-    $ pwd
-  b. Change the directory (cd) you’re in to a temporary folder:
-    $ cd ~/tmp
+  
+    a. Determine what directory you’re in by printing your working directory:
+    
+          $ pwd
+    
+    b. Change the directory (cd) you’re in to a temporary folder:
+    
+         $ cd ~/tmp
     
 2. Add the HTTP clone URL from your clipboard:
-    $ git clone <paste link here>
+    
+         $ git clone [paste link here]
     
 3. Change directory to your new repo:
-    $ cd <repo name here>
-    List the files in the repo:
-    $ ls
-    Look at what's in the README.md file:
-    $ head README.md
-    Look at where this info is sourced from:
-    $ git remote show origin
 
-###Make a change, commit and push
+        $ cd [repo name here]
+    
+        List the files in the repo:
+    
+        $ ls
+        
+        Look at what's in the README.md file:
+    
+        $ head README.md
+        
+        Look at where this info is sourced from:
+    
+        $ git remote show origin
+
+## Make a change, commit and push
 1. Add a link to the README.md to see if Git recognizes something is changing:
-    $ echo "note to self" >> README.md
-    $ git status
+
+        $ echo "note to self" >> README.md
+    
+        $ git status
   
 This will tell you what git sees in the working directory and the master branch. Git should tell you that something was modified - the README.md file - nothing else has happened. The local version of the branch you're on (master) is up to date with the GitHub version master. That's because you haven't officially staged your changes you made to the README.md file to be added, nor have you committed those changes to the master.
 
-2. 
-  
+2. Stage the change, commit and finally push to the remote repository on GitHub. You may be prompted to log-in at this point.
+        
+        $ git add -A
+git add -A, --all, means add changes from all tracked and untracked files
 
+        $ git commit -m [commit message here that explains what you are doing]
+-m, providing a commit message for every commit is important for everyone to understand each step in the progression of the project
+        
+        S git push
+  
+## Confirm all the local changes make it to the remote GitHub repository
+
+1. Go online to your account and look at the history of your new repo. Did the changes you just made appear?
+```{r local-Github, echo=FALSE, out.width = '75%'}
+knitr::include_graphics("figures/local-Github.png")
+```
+  
+## Clean up your test repo
+
+1. Delete locally:
+
+    $ rm -rf [your test repo name]
+ -rf, means force remove a directory and contents without confirmation
+
+2. Delete remotely GitHub account:
+
+    a. Go to Settings under repo homepage
+    b. Scroll ALL the way down to the bottom of the page - to the Danger Zone
+    c. Delete repository to erase all existance.
+  
 ## 13. Detect Git from RStudio
 
 1. Create repository from RSTudio/GitHub, see if it appears on GitHub/RStudio
