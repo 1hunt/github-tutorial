@@ -12,10 +12,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 1. Introduction: Why Git and GitHub?
 ### What's the difference between Git and GitHub.
+Version controll is important for...
+
 Git is a **version control system** that is like a supped up version of the "Track Changes" feature within Microsoft Word. Git allows the different collaborators on a project to track changes and revert to older versions if needed. 
 
 GitHub is a cloud based platform built around Git that stores code *__pushed__* to it from a computer that uses Git.
 
+In this turtorial you will register for a GitHub account, install Git, connect RStudio to Git and learn how to track versions through branches, pulls, commits, pushes, fetches, and merges.
 
 ## 2. Register for a GitHub Account
 
@@ -51,11 +54,58 @@ git --version
 
 ### 4.1 Windows Installation
 There are two options for Windows installation:
-**Option 1** : install Git for Windows (https://gitforwindows.org), aka _msysgit_ or "Git Bash", which will provide Git as well as a Bash shell.
+**Option 1:**  Install Git for Windows (https://gitforwindows.org), aka _msysgit_ or "Git Bash", which will provide Git as well as a Bash shell.
 
 _side note on shells/terminal/bash. Windows OS doesn't provide a shell terminal. Shell refers to an early (1970s) command-line interpreter for Unix shell.  Bash (**B**ourne **a**gain **sh**ell) is the command-line interpreter for GNU (**g**nu **n**ot **u**nix) OS. It's all still very confusing, just know that bash is largely compatible with shell, and that for many Git commands the "Git Bash" shell/terminal will need to be used._
 
+```{r installwind, echo=FALSE, out.width = '50%'}
+knitr::include_graphics("figures/GitforWind.png")
+```
+
+Pick the executable file that is best for your system. When asked about "Adjusting your PATH environment" select "Git from the command line and also from 3rd-part softwar." Accept other defaults.
+
+RStudio for Windows prefers for Git to be installed in the C:/Program Files and will be the default. The Git executable will be located at C:/Program Files/Git/bin/git.exe. Use this convention unless you _really_ do not want to.
+
+**Option 2:** Install Git from the Chocolatey package manager (https://chocolatey.org). You'll need to have Chocolatey installed (https://chocolatey.org/install) which may be useful if you plan on installing other open source software down the road.
+
+```{r choco, echo=FALSE, out.width = '50%'}
+knitr::include_graphics("figures/chocoinstall.png")
+```
+
+```{r chocoGit, echo=FALSE, out.width = '50%'}
+knitr::include_graphics("figures/chocoGitinstall.png")
+```
+
+After Chocolately is installed, in a shell type:
+
+```{bash chocoinstall, eval=FALSE, echo=TRUE}
+choco install git.install
+```
+
+The most current version is Git 2.23.0.
+
 ### 4.2 macOS Installation
+There are also several options for installing Git on a macOS.
+**Option 1:** In the shell/terminal with Xcode:
+
+```{bash macinstall, eval=FALSE, echo=TRUE}
+git --version
+git config
+```
+
+This will prompt an offer to install. Accept the offer.
+
+Or more directly:
+```{bash macinstallxc, eval=FALSE, echo=TRUE}
+xcode-select --install
+```
+
+**Option 2:** Download git from here http://git-scm.com/downloads
+
+**Option 3:** Download using Homebrew
+```{bash homebrew, eval=FALSE, echo=TRUE}
+bew install git
+```
 
 ## 5. Bonjour Git, enchante
 
