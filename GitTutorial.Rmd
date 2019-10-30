@@ -140,6 +140,36 @@ For everything else, select default.
 
 5. Copy the HTTP clone URL to your clipboard via green "Clone or Download" button
 
+###Clone your repo to a local computer
+
+1. Head to terminal or shell
+  a. Determine what directory you’re in by printing your working directory:
+    $ pwd
+  b. Change the directory (cd) you’re in to a temporary folder:
+    $ cd ~/tmp
+    
+2. Add the HTTP clone URL from your clipboard:
+    $ git clone <paste link here>
+    
+3. Change directory to your new repo:
+    $ cd <repo name here>
+    List the files in the repo:
+    $ ls
+    Look at what's in the README.md file:
+    $ head README.md
+    Look at where this info is sourced from:
+    $ git remote show origin
+
+###Make a change, commit and push
+1. Add a link to the README.md to see if Git recognizes something is changing:
+    $ echo "note to self" >> README.md
+    $ git status
+  
+This will tell you what git sees in the working directory and the master branch. Git should tell you that something was modified - the README.md file - nothing else has happened. The local version of the branch you're on (master) is up to date with the GitHub version master. That's because you haven't officially staged your changes you made to the README.md file to be added, nor have you committed those changes to the master.
+
+2. 
+  
+
 ## 13. Detect Git from RStudio
 
 1. Create repository from RSTudio/GitHub, see if it appears on GitHub/RStudio
