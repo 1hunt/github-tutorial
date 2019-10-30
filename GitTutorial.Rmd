@@ -127,7 +127,24 @@ For everything else, select default.
 4. Pull a repository from GitHub by pressing the blue down arrow in the Git window
   i. access repository files in Files window in lower right of RStudio
   
-
+## 22. Branching
+1. Branches are separate lines of edits which enable multiple people to work at the same time without destroying each others work
+2. The main branch is named ‘Master’ by default
+3. To create new branch:
+	a. Git Bash::$ git branch branch_name #create branch
+	b. RStudio:: Button in GUI (see picture)
+4. To switch between branches
+	a. Git Bash::$ git checkout branch_name #create branch
+    	b. RStudio:: Button in GUI (see picture)
+5. To merge branches
+    	a. Do this in Git Bash, not RStudio or GitHub:
+        	$ git checkout master #switch to master branch
+        	$ git merge branch_name #merge branch_name into master
+    	b. Conflicts
+        	i. if merging branch conflicts with main, CONFLICT message will show in Git Bash
+        	ii. find out more about the conflict: Git Bash::$ git status
+        	iii. resolve conflict: open file from the main branch in R, edit to meet desired outcome
+6. Abandon merge: Git Bash::$ git merge --abort
  
 
 
