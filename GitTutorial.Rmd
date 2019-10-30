@@ -100,11 +100,11 @@ For everything else, select default.
 			  i. Windows::C:/Program Files/Git/bin/git.exe
 			  ii. Mac::/usr/bin/git
         
- ## 14. RStudio, Git, GitHub Hell
+## 14. RStudio, Git, GitHub Hell
  
- 1. Various debugging tips
+1. Various debugging tips
  
- ## 15. New Project, GitHub first
+## 15. New Project, GitHub first
  
 1. Click green "create repository" button on GitHub home page
   a. Repository name
