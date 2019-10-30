@@ -131,11 +131,11 @@ For everything else, select default.
 1. Branches are separate lines of edits which enable multiple people to work at the same time without destroying each others work
 2. The main branch is named ‘Master’ by default
 3. To create new branch:
-	a. Git Shell::$ git branch branch_name #create branch
-	b. RStudio:: Button in GUI (see picture)
+	a. Git Shell::$ git branch branch_name 
+	b. RStudio:: Button in Git window
 4. To switch between branches
-	a. Git Shell::$ git checkout branch_name #create branch
-    	b. RStudio:: Button in GUI (see picture)
+	a. Git Shell::$ git checkout branch_name
+    	b. RStudio:: Button in Git window
 5. To merge branches
     	a. Do this in Git Shell, not RStudio or GitHub:
         	$ git checkout master #switch to master branch
