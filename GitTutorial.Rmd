@@ -47,7 +47,7 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 ## 4. Install Git
 Open up the terminal or shell and check to see if you already git installed.
 
-```{bash}
+```{}
 which git
 git --version
 ```
@@ -140,6 +140,62 @@ For everything else, select default.
 
 5. Copy the HTTP clone URL to your clipboard via green "Clone or Download" button
 
+## 13. Detect Git from RStudio
+
+1. Create repository from RSTudio/GitHub, see if it appears on GitHub/RStudio
+
+2. Set global directory path to Git in RStudio
+		a. >Tools >Global Options >Git/SVN
+		b. Git executable:
+			  i. Windows::C:/Program Files/Git/bin/git.exe
+			  ii. Mac::/usr/bin/git
+        
+## 14. RStudio, Git, GitHub Hell
+ 
+1. Various debugging tips
+ 
+## 15. New Project, GitHub first
+ 
+1. Click green "create repository" button on GitHub home page
+  a. Repository name
+  b. public or private
+  c. YES, create README
+ 
+2. Connect to the new repo in RStudio
+  a. File > New Project > Version Control > Git
+  
+  b. Repository URL: https://github.com/username/reponame
+  
+3. Stage, Commit, Push documents to GitHub
+  a. Create/Load documents
+  b. Stage documents by clicking check box next to their name in Git window in upper right of RStudio
+  c. Commit by pressing "Commit" button in Git window
+      i. opens new window
+      ii. add commit message and click commit button
+  d. Click green up arrow in Git window to push documents to GitHub
+    
+4. Pull a repository from GitHub by pressing the blue down arrow in the Git window
+  i. access repository files in Files window in lower right of RStudio
+  
+## 22. Branching
+1. Branches are separate lines of edits which enable multiple people to work at the same time without destroying each others work
+2. The main branch is named ‘Master’ by default
+3. To create new branch:
+	a. Git Shell::$ git branch branch_name 
+	b. RStudio:: Button in Git window
+4. To switch between branches
+	a. Git Shell::$ git checkout branch_name
+    	b. RStudio:: Button in Git window
+5. To merge branches
+    	a. Do this in Git Shell, not RStudio or GitHub:
+        	$ git checkout master #switch to master branch
+        	$ git merge branch_name #merge branch_name into master
+    	b. Conflicts
+        	i. if merging branch conflicts with main, CONFLICT message will show in Git Shell
+        	ii. find out more about the conflict: Git Shell::$ git status
+        	iii. resolve conflict: open file from the main branch in R, edit to meet desired outcome
+6. Abandon merge: Git Shell::$ git merge --abort
+ 
 
 
 
