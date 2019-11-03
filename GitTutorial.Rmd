@@ -10,11 +10,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 # Part One: Introduction and Installation 
 
-## 1. Introduction: Why Git and GitHub?
-### What's the difference between Git and GitHub.
-Version control is important for...
+In order for our science to be reproducible, four main concerns need to be addressed.
 
-Git is a **version control system** that is like a supped up version of the "Track Changes" feature within Microsoft Word. Git allows the different collaborators on a project to track changes and revert to older versions if needed. 
+1. Storage: One needs to store data and code in a safe and secure way. Storing data on a cloud server protects data from computer failures, viruses, lost flash drives, spilled beverages, etc.
+2. Access: One can access data from different devices in different places.
+3. Collaboration: Collaborators can access  and update data and code.
+4. Version Control: Git and GitHub offer collaborators the opportunity to make changes to data or code while tracking different versions of the changes. 
+
+## 1. Introduction: Why Git and GitHub?
+### What's the difference between Git and GitHub?
+
+Git is a **version control system** that is like a supped up version of the "Track Changes" feature within Microsoft Word.  
 
 GitHub is a cloud based platform built around Git that stores code *__pushed__* to it from a computer that uses Git.
 
@@ -22,7 +28,7 @@ In this turtorial you will register for a GitHub account, install Git, connect R
 
 ## 2. Register for a GitHub Account
 
-If you do not currently have a GitHub account then you will register for one today! If you already have a GitHub account, sit back and relax while your classmates get set up.
+If you do not currently have a GitHub account then you will register for one today! 
 
 1. Go to https://github.com
 2. Pick a username that incorporates your actual name. Enter an email and create a password.
@@ -104,14 +110,32 @@ xcode-select --install
 
 **Option 3:** Download using Homebrew
 ```{bash homebrew, eval=FALSE, echo=TRUE}
-bew install git
+brew install git
 ```
 
-## 5. Bonjour Git, enchante
+## 5. Bonjour Git, enchante: git config
 
-## 6. Optional: Install a Git client
+Now that Git is installed on your computer, let's get to know Git. First, set up your global environment. Make sure to use the same user name and emial you used to set up your GitHub account. Use your preferred text editor (other options include "emacs".)
 
-## 9. Connect to GitHub 
+```{bash git_global, eval=FALSE, echo=TRUE}
+git config --global user.name 'Katie Murenbeeld'
+git config --global user.email 'katiemurenbeeld@u.boisestate.edu'
+git config --global core.editor "vim"
+git config --global --list
+```
+
+There is a package within R that can also set your Git user name and email.
+
+```{r usethis, eval=FALSE, echo=TRUE}
+## install if needed (do this once):
+# install.packages("usethis")
+
+library(usethis)
+use_git_config(user.name = "Kaite Murenbeeld", user.email = "katiemurenbeeld@u.boisestate.edu")
+
+```
+
+## 6. Connect to GitHub 
 
 
 ## Make a repo
