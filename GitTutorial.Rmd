@@ -17,6 +17,12 @@ In order for our science to be reproducible, four main concerns need to be addre
 3. Collaboration: Collaborators can access  and update data and code.
 4. Version Control: Git and GitHub offer collaborators the opportunity to make changes to data or code while tracking different versions of the changes. 
 
+### Useful References:
+* https://happygitwithr.com
+* https://rogerdudler.github.io/git-guide/
+* https://englianhu.files.wordpress.com/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf Chapter 5.
+* http://swcarpentry.github.io/git-novice/
+
 ## 1. Introduction: Why Git and GitHub?
 ### What's the difference between Git and GitHub?
 
