@@ -1,5 +1,5 @@
 ---
-title: "EEB603_GitTutorial"
+title: "EEB 603: Git Tutorial"
 author: "Jacob Heil, Lauren Hunt, Katie Murenbeeld"
 date: "10/18/2019"
 output:
@@ -157,7 +157,7 @@ use_git_config(user.name = "Kaite Murenbeeld", user.email = "katiemurenbeeld@u.b
 ## 6. Connect to GitHub 
 
 
-## Make a repo
+### 6.1  Make a repo
 
 Here, we are just making sure we can push and pull and everyone is communicating.
 
@@ -184,7 +184,7 @@ For everything else, select default.
 
 5. Copy the HTTP clone URL to your clipboard via green "Clone or Download" button
 
-## Clone your repo to a local computer
+### 6.2 Clone your repo to a local computer
 
 1. Head to terminal or shell
   
@@ -216,7 +216,7 @@ For everything else, select default.
     
         $ git remote show origin
 
-## Make a change, commit and push
+### 6.3  Make a change, commit and push
 1. Add a link to the README.md to see if Git recognizes something is changing:
 
         $ echo "note to self" >> README.md
@@ -235,14 +235,14 @@ git add -A, --all, means add changes from all tracked and untracked files
         
         S git push
   
-## Confirm all the local changes make it to the remote GitHub repository
+### 6.4 Confirm all the local changes make it to the remote GitHub repository
 
 1. Go online to your account and look at the history of your new repo. Did the changes you just made appear?
 ```{r local-Github, echo=FALSE, out.width = '75%'}
 knitr::include_graphics("figures/local-Github.png")
 ```
   
-## Clean up your test repo
+### 6.5 Clean up your test repo
 
 1. Delete locally:
 
