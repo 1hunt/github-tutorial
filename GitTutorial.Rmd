@@ -70,7 +70,7 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 ```
 
 ## 4. Install Git
-Open up the terminal or shell and check to see if you already git installed.
+Open up the terminal or shell and check to see if you already have git installed.
 
 ```{}
 which git
@@ -81,7 +81,7 @@ git --version
 There are two options for Windows installation:
 **Option 1:**  Install Git for Windows (https://gitforwindows.org), aka _msysgit_ or "Git Bash", which will provide Git as well as a Bash shell.
 
-_side note on shells/terminal/bash. Windows OS doesn't provide a shell terminal. Shell refers to an early (1970s) command-line interpreter for Unix shell.  Bash (**B**ourne **a**gain **sh**ell) is the command-line interpreter for GNU (**g**nu **n**ot **u**nix) OS. It's all still very confusing, just know that bash is largely compatible with shell, and that for many Git commands the "Git Bash" shell/terminal will need to be used._
+_side note on shells/terminal/bash. Windows OS doesn't provide a shell terminal. Shell refers to an early (1970s) command-line interpreter for Unix shell.  Bash (**B**ourne **a**gain **sh**ell) is the command-line interpreter for GNU (**g**nu **n**ot **u**nix) OS. It's all very confusing, just know that bash is largely compatible with shell, and that for many Git commands the "Git Bash" shell/terminal will need to be used._
 
 ```{r installwind, echo=FALSE, out.width = '50%'}
 knitr::include_graphics("figures/GitforWind.png")
@@ -153,6 +153,8 @@ library(usethis)
 use_git_config(user.name = "Kaite Murenbeeld", user.email = "katiemurenbeeld@u.boisestate.edu")
 
 ```
+
+That's it! You are not all set up with Git on your "local" computer. Now it's time to get set up on GitHub.
 
 ## 6. Connect to GitHub 
 
