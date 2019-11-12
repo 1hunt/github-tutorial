@@ -31,7 +31,7 @@ In order for our science to be reproducible, four main concerns need to be addre
 4. Version Control: Git and GitHub offer collaborators the opportunity to make changes to data or code while tracking different versions of the changes. 
 
 ### Useful References:
-* https://happygitwithr.com
+* https://happygitwithr.com Much of the information in this tutorial came from this website.
 * https://rogerdudler.github.io/git-guide/
 * https://englianhu.files.wordpress.com/2016/01/reproducible-research-with-r-and-studio-2nd-edition.pdf Chapter 5.
 * http://swcarpentry.github.io/git-novice/
@@ -269,7 +269,9 @@ knitr::include_graphics("figures/local-Github.png")
         
 ## 8. RStudio, Git, GitHub Hell
  
-1. Various debugging tips
+1. Various debugging tips can be found here: https://happygitwithr.com/troubleshooting.html
+
+Hopefully, no one will run into any of these issues, but the link above is a great reference. 
  
 ## 9. New Project, GitHub first
  
