@@ -1,7 +1,7 @@
 ---
 title: "EEB 603: Git Tutorial"
 author: "Jacob Heil, Lauren Hunt, Katie Murenbeeld"
-date: "10/18/2019"
+date: "11/12/2019"
 output:
   pdf_document:
     toc: yes
