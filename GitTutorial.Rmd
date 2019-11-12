@@ -165,7 +165,7 @@ Here, we are just making sure we can push and pull and everyone is communicating
 
 2. Click on the green "New" button or click on "Repositories" on your profile page and then click on the "New" button. 
 ```{r pressure, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("new.png")
+knitr::include_graphics("figures/new.png")
 ```
 
 3. Fill in:
